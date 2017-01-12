@@ -1,0 +1,7 @@
+====== header 1 ======
+
+== header 5 ==
+
+[[hello world|hi]] this is a test!
+
+[[wp>Dogs]] are cool, look it up. [[link:sub|sublink]] example.

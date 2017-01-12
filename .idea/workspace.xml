@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f74c789-3e1f-47f3-80de-7796403655fa" name="Default" comment="" />
+    <list default="true" id="9f74c789-3e1f-47f3-80de-7796403655fa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layouts/shortcodes/wp.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/markdown_links.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/dokuwiki_example.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/expected_markdown_output.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_markdown_converter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_markdown_links.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dokuwiki-to-hugo.iml" afterPath="$PROJECT_DIR$/.idea/dokuwiki-to-hugo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/markdown_converter.py" afterPath="$PROJECT_DIR$/src/markdown_converter.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,35 +25,93 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="markdown_converter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/markdown_converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="markdown_headers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/markdown_headers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_markdown_header.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_markdown_header.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_markdown_header.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state relative-caret-position="45">
+              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="expected_markdown_output.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/expected_markdown_output.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_markdown_converter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_markdown_converter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="markdown_links.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/markdown_links.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dokuwiki_example.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/dokuwiki_example.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_markdown_links.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_markdown_links.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layouts/shortcodes/wp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,24 +125,38 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>contains</find>
+      <find>cont</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/markdown_converter.py" />
         <option value="$PROJECT_DIR$/test/test_markdown_headers.py" />
-        <option value="$PROJECT_DIR$/src/markdown_headers.py" />
         <option value="$PROJECT_DIR$/test/test_markdown_header.py" />
+        <option value="$PROJECT_DIR$/src/markdown_headers.py" />
+        <option value="$PROJECT_DIR$/layouts/shortcodes/wp.html" />
+        <option value="$PROJECT_DIR$/test/dokuwiki_example.txt" />
+        <option value="$PROJECT_DIR$/test/expected_markdown_output.txt" />
+        <option value="$PROJECT_DIR$/src/markdown_converter.py" />
+        <option value="$PROJECT_DIR$/test/test_markdown_converter.py" />
+        <option value="$PROJECT_DIR$/test/test_markdown_links.py" />
+        <option value="$PROJECT_DIR$/src/markdown_links.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -98,7 +181,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dokuwiki-to-hugo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dokuwiki-to-hugo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dokuwiki-to-hugo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dokuwiki-to-hugo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -116,17 +223,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dokuwiki-to-hugo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dokuwiki-to-hugo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shortcodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in TestMarkdownHeader">
-    <configuration default="false" name="Unittest TestMarkdownHeader.test_convert" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in TestMarkdownLinks">
+    <configuration default="false" name="Unittests in TestMarkdownLinks" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -136,9 +262,53 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dokuwiki-to-hugo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_header.py" />
-      <option name="CLASS_NAME" value="TestMarkdownHeader" />
-      <option name="METHOD_NAME" value="test_convert" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_links.py" />
+      <option name="CLASS_NAME" value="TestMarkdownLinks" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TestMarkdownLinks (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dokuwiki-to-hugo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_links.py" />
+      <option name="CLASS_NAME" value="TestMarkdownLinks" />
+      <option name="METHOD_NAME" value="test_internal_links_converted_properly" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestMarkdownLinks.test_unknown_interwiki_link_throws_exception" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dokuwiki-to-hugo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_links.py" />
+      <option name="CLASS_NAME" value="TestMarkdownLinks" />
+      <option name="METHOD_NAME" value="test_unknown_interwiki_link_throws_exception" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -148,7 +318,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest TestMarkdownHeader.test_convert_h1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in TestMarkdownHeader (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -158,51 +328,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dokuwiki-to-hugo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_header.py" />
-      <option name="CLASS_NAME" value="TestMarkdownHeader" />
-      <option name="METHOD_NAME" value="test_convert_h1" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest TestMarkdownHeader.test_convert_h6" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dokuwiki-to-hugo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_header.py" />
-      <option name="CLASS_NAME" value="TestMarkdownHeader" />
-      <option name="METHOD_NAME" value="test_convert_h6" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in TestMarkdownHeader" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dokuwiki-to-hugo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_header.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_converter.py" />
       <option name="CLASS_NAME" value="TestMarkdownHeader" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -214,21 +340,26 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="markdown_headers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittest TestMarkdownHeader.test_acceptance_test_case" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dokuwiki-to-hugo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/markdown_headers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_markdown_converter.py" />
+      <option name="CLASS_NAME" value="TestMarkdownHeader" />
+      <option name="METHOD_NAME" value="test_acceptance_test_case" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -366,24 +497,27 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_convert" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_convert_h1" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_convert_h6" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownHeader" />
-      <item index="4" class="java.lang.String" itemvalue="Python.markdown_headers" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownLinks" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownLinks (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownLinks.test_unknown_interwiki_link_throws_exception" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownHeader (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_acceptance_test_case" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownHeader" />
-        <item index="1" class="java.lang.String" itemvalue="Python.markdown_headers" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_convert_h6" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_convert_h1" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_convert" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownLinks" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownHeader.test_acceptance_test_case" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownHeader (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestMarkdownLinks.test_unknown_interwiki_link_throws_exception" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestMarkdownLinks (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -396,54 +530,57 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_TestMarkdownHeader_test_convert - 2017.01.12 at 16h 37m 46s.xml">
-      <configuration name="Unittest TestMarkdownHeader.test_convert" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 35m 59s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestMarkdownHeader_test_convert_h1 - 2017.01.12 at 16h 40m 38s.xml">
-      <configuration name="Unittest TestMarkdownHeader.test_convert_h1" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 37m 38s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestMarkdownHeader_test_convert_h1 - 2017.01.12 at 16h 42m 44s.xml">
-      <configuration name="Unittest TestMarkdownHeader.test_convert_h1" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 37m 55s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestMarkdownHeader_test_convert_h6 - 2017.01.12 at 16h 42m 47s.xml">
-      <configuration name="Unittest TestMarkdownHeader.test_convert_h6" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 39m 39s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestMarkdownHeader_test_convert_h6 - 2017.01.12 at 16h 42m 52s.xml">
-      <configuration name="Unittest TestMarkdownHeader.test_convert_h6" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 39m 56s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestMarkdownHeader - 2017.01.12 at 16h 43m 00s.xml">
-      <configuration name="Unittests in TestMarkdownHeader" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 40m 21s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestMarkdownHeader - 2017.01.12 at 16h 44m 24s.xml">
-      <configuration name="Unittests in TestMarkdownHeader" configurationId="tests" />
+    <history-entry file="Unittest_TestMarkdownHeader_test_acceptance_test_case - 2017.01.12 at 21h 42m 24s.xml">
+      <configuration name="Unittest TestMarkdownHeader.test_acceptance_test_case" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestMarkdownHeader - 2017.01.12 at 16h 46m 50s.xml">
-      <configuration name="Unittests in TestMarkdownHeader" configurationId="tests" />
+    <history-entry file="Unittests_in_TestMarkdownLinks - 2017.01.12 at 21h 43m 09s.xml">
+      <configuration name="Unittests in TestMarkdownLinks" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestMarkdownHeader - 2017.01.12 at 16h 47m 11s.xml">
-      <configuration name="Unittests in TestMarkdownHeader" configurationId="tests" />
+    <history-entry file="Unittests_in_TestMarkdownLinks - 2017.01.12 at 21h 43m 52s.xml">
+      <configuration name="Unittests in TestMarkdownLinks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestMarkdownLinks - 2017.01.12 at 21h 44m 04s.xml">
+      <configuration name="Unittests in TestMarkdownLinks" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17430556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -451,21 +588,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="16" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test_markdown_headers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/markdown_converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="60">
           <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
@@ -473,7 +607,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/markdown_headers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
@@ -481,10 +615,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_markdown_header.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="435">
           <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_markdown_headers.py" />
+    <entry file="file://$PROJECT_DIR$/layouts/shortcodes/wp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/markdown_headers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_markdown_header.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/markdown_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dokuwiki_example.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/expected_markdown_output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_markdown_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_markdown_links.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/markdown_links.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
