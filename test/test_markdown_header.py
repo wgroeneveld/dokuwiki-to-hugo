@@ -13,24 +13,20 @@ class TestMarkdownHeader(TestCase):
 
     def test_convert_h1(self):
         result = self.converter.convert("====== Classes ======")
-        self.assertEqual(result, "# Classes")
+        self.assertEqual(result, "# Classes ")
 
     def test_convert_h2(self):
         result = self.converter.convert("===== Classes =====")
-        self.assertEqual(result, "## Classes")
+        self.assertEqual(result, "## Classes ")
 
     def test_convert_h3(self):
         result = self.converter.convert("==== Classes ====")
-        self.assertEqual(result, "### Classes")
+        self.assertEqual(result, "### Classes ")
 
     def test_convert_h4(self):
-        result = self.converter.convert("==== Classes ====")
-        self.assertEqual(result, "#### Classes")
+        result = self.converter.convert("=== Classes ===")
+        self.assertEqual(result, "#### Classes ")
 
     def test_convert_h5(self):
-        result = self.converter.convert("=== Classes ===")
-        self.assertEqual(result, "##### Classes")
-
-    def test_convert_h6(self):
         result = self.converter.convert("== Classes ==")
-        self.assertEqual(result, "###### Classes ")
+        self.assertEqual(result, "##### Classes ")
