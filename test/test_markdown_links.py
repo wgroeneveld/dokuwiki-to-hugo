@@ -34,6 +34,12 @@ class TestMarkdownLinks(TestCase):
 
         self.assertEqual(mdLink, self.converter.convert(dokuLink))
 
+    def test_multiple_links_in_text_converted_properly(self):
+        mdLink = """{{< relref "bla" >}} wow this looks cool and so does {{< relref "this" >}} and such"""
+        dokuLink = "[[bla]] wow this looks cool and so does [[this]] and such"
+
+        self.assertEqual(mdLink, self.converter.convert(dokuLink))
+
     def test_internal_links_with_some_text_in_line_converted_properly(self):
         mdLink = """[text]({{< relref "bla" >}}) wow this looks cool"""
         dokuLink = "[[bla|text]] wow this looks cool"
