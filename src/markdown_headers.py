@@ -1,6 +1,8 @@
 from collections import OrderedDict
+from re import compile
 
 class MarkdownHeader:
+    pattern = compile('(=+)(.*?)(=+)')
     head = "="
     config = {
         '======': 1,
@@ -11,13 +13,9 @@ class MarkdownHeader:
     }
 
     def convert(self, text):
-        config = OrderedDict(sorted(MarkdownHeader.config.items(), key = lambda t : t[1]))
-
-        for key, val in config.items():
-            if text.startswith(key):
-                return ('#' * val) + self.strip(text)
-        return text
-
-
-    def strip(self, text):
-        return text.replace(MarkdownHeader.head, "")
+        result = text
+        for regex_head in MarkdownHeader.pattern.findall(text):
+            orig_header = regex_head[0] + regex_head[1] + regex_head[2]
+            new_header = ('#' * MarkdownHeader.config[regex_head[0]]) + regex_head[1]
+            result = result.replace(orig_header, new_header)
+        return result

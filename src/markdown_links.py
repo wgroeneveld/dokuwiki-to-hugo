@@ -3,17 +3,17 @@ from os import walk
 import re
 
 class MarkdownLinks:
-    known_shortcodes = ('wp')
-    pattern = re.compile('\[\[(.*?)\]\]')
+    # see http://pythex.org/
+    pattern = re.compile('(\[\[)(.*?)(\]\])')
 
     def convert(self, text):
         result = text
         for regex_link in MarkdownLinks.pattern.findall(text):
-            origlink = "[[" + regex_link + "]]"
+            origlink = ''.join(regex_link)
             convertedlink = ""
-            if "http" in regex_link or "www" in regex_link:
+            if "http" in origlink or "www" in origlink:
                 convertedlink = self.convert_as_external_link(origlink)
-            elif ">" in regex_link:
+            elif ">" in origlink:
                 convertedlink = self.convert_as_interwiki_link(origlink)
             else:
                 convertedlink = self.convert_as_internal_link(origlink)
