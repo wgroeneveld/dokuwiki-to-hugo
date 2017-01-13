@@ -1,18 +1,23 @@
 import os
 from os import walk
-
+import re
 
 class MarkdownLinks:
     known_shortcodes = ('wp')
+    pattern = re.compile('\[\[.+\]\]')
 
     def convert(self, text):
-        if not text.startswith("[["):
-            return text
-        if "http" in text or "www" in text:
-            return self.convert_as_external_link(text)
-        if ">" in text:
-            return self.convert_as_interwiki_link(text)
-        return self.convert_as_internal_link(text)
+        result = text
+        for link in MarkdownLinks.pattern.findall(text):
+            convertedlink = ""
+            if "http" in text or "www" in text:
+                convertedlink = self.convert_as_external_link(text)
+            elif ">" in text:
+                convertedlink = self.convert_as_interwiki_link(text)
+            else:
+                convertedlink = self.convert_as_internal_link(text)
+            result = result.replace(link, convertedlink)
+        return result
 
     def parseUrl(self, text):
         return text[2:text.index('|')]
@@ -21,7 +26,7 @@ class MarkdownLinks:
         return text[2:len(text)-2].replace(":", "/")
 
     def parseTitle(self, text):
-        return text[text.index('|') + 1: text.index(']]') - 2]
+        return text[text.index('|') + 1: text.index(']]')]
 
     def convert_as_interwiki_link(self, text):
         interwiki_shortcode = text[2:text.index('>')]
