@@ -12,6 +12,7 @@ See https://www.dokuwiki.org/wiki:syntax
 * bold, italic, sub/sup, strikethrough
 * headings with equal sign
 * linebreaks (double backslash) are at this moment replaced with HTML BRs.
+* unordered lists (already native MD), ordered lists using dash to markdown
 
 ### embedding HTML
 
@@ -36,14 +37,17 @@ Simply add custom.html and link to the website of your choice. Use Hugo's `{{ in
 
 ## TODO
 
+### styling
+
 * Figure out image links ala http://php.net|{{wiki:dokuwiki-128.png}}
 * Tables, should complex ones be supported or can I do a manual convert?
+* emoticons
+* no formatting (nowiki, %%) - should this just be a pre?
+
+### structure
+
 * build file structure - wire everything together
 * build header TOML with timestamps, draft false etc
-* ordered lists using dash to markdown?
-* emoticons
-* no formatting (nowiki) - should this just be a pre?
-* preventing of wiki markup %% - what to do with it?
 
 ## Not supported and probably will never be
 
