@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.markdown_headers import MarkdownHeader
+from src.markdown.headers import MarkdownHeader
 
 
 class TestMarkdownHeader(TestCase):

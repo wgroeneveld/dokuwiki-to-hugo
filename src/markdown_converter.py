@@ -1,12 +1,22 @@
-from src.markdown_headers import MarkdownHeader
-from src.markdown_links import MarkdownLinks
 from functools import reduce
+
+from src.markdown.links import MarkdownLinks
+
+from src.markdown.headers import MarkdownHeader
+from src.markdown.simplestyle import MarkdownItalic, MarkdownBold, MarkdownStrikeThrough
+
 
 class MarkdownConverter:
 
     def __init__(self, file):
         self.file = file
-        self.converters = (MarkdownHeader(), MarkdownLinks())
+        self.converters = (
+            MarkdownHeader(),
+            MarkdownLinks(),
+            MarkdownItalic(),
+            MarkdownBold(),
+            MarkdownStrikeThrough()
+        )
 
     def convert(self):
         converted = []

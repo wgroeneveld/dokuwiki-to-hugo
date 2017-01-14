@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.markdown_links import MarkdownLinks
+from src.markdown.links import MarkdownLinks
 
 
 class TestMarkdownLinks(TestCase):
