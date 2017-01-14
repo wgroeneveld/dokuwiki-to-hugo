@@ -11,6 +11,7 @@ class MarkdownConverter:
     def __init__(self, file):
         self.file = file
         self.converters = (
+            # TODO auto-discover these. How do I do that, without interfaces?
             MarkdownHeader(),
             MarkdownLinks(),
             MarkdownItalic(),

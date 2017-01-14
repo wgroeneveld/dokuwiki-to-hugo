@@ -1,9 +1,21 @@
 from unittest import TestCase
 
-from src.markdown.simplestyle import MarkdownBold, MarkdownItalic, MarkdownStrikeThrough, MarkdownLineBreak
+from src.markdown.simplestyle import MarkdownBold, MarkdownItalic, MarkdownStrikeThrough, MarkdownLineBreak, \
+    MarkdownInlineCode, MarkdownInlineHtml
 
 
 class TestMarkdownSimpleStyles(TestCase):
+
+    def test_inline_html_simply_removes_tags(self):
+        src = "<html><strong>sup</strong></html>"
+        expected = "<strong>sup</strong>"
+        self.assertEqual(expected, MarkdownInlineHtml().convert(src))
+
+    def test_convert_inline_code(self):
+        inline_converter = MarkdownInlineCode()
+        src = "hi this is ''some code''"
+        expected = "hi this is `some code`"
+        self.assertEqual(expected, inline_converter.convert(src))
 
     def test_some_linebreaks(self):
         src = '''

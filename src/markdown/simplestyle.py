@@ -33,6 +33,11 @@ class MarkdownLineBreak(SimpleReplacementStyle):
     def __init__(self):
         super().__init__('<br/>', '\\')
 
+# inline html is supported with Hugo, don't need the tags.
+class MarkdownInlineHtml:
+    def convert(self, text):
+        return text.replace('<html>', '').replace('</html>', '')
+
 # bold in Doku is bold in MD
 class MarkdownBold(NopStyle):
     pass
@@ -44,3 +49,7 @@ class MarkdownItalic(SimpleStyleBetweenTags):
 class MarkdownStrikeThrough(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('~~', '<del>', '</del>')
+
+class MarkdownInlineCode(SimpleStyleBetweenTags):
+    def __init__(self):
+        super().__init__('`', "''", "''")
