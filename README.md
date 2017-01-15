@@ -4,6 +4,27 @@ A DokuWiki to Hugo file exporter to quickly migrate your existing PHP wiki to Hu
 
 See https://www.dokuwiki.org/wiki:syntax
 
+**How do I run this thing?**
+
+Main wiring in `DokuWikiToHugo` - see the tests for an elaborate example.
+
+```python
+      DokuWikiToHugo().doku_to_hugo('some_dokuwiki_root_dir')
+```
+
+This generates files in a new folder called 'output' with the same directory structure.
+
+## TOML File headers
+
+Every converted file contains a TOML header with:
+
+* datestamp - looking at the file modified date (transfer from your FTP using 'keep timestamps' option)
+* draft automatically set to false
+* tags: every subfolder is a tag, including the name of the file
+* title: name of the file
+
+See `test_hugo_file_config.py` for an example.
+
 ## Following Dokuwiki syntax converted:
 
 ### general
@@ -43,11 +64,6 @@ Simply add custom.html and link to the website of your choice. Use Hugo's `{{ in
 * Tables, should complex ones be supported or can I do a manual convert?
 * emoticons
 * no formatting (nowiki, %%) - should this just be a pre?
-
-### structure
-
-* build file structure - wire everything together
-* build header TOML with timestamps, draft false etc
 
 ## Not supported and probably will never be
 
