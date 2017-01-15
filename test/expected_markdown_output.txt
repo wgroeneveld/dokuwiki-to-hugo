@@ -1,7 +1,7 @@
-# header 1
+# header 1 
 
-##### header 5
+##### header 5 
 
 [hi]({{< relref "hello world" >}}) this is a test!
 
-{{< wp Dogs >}} are cool, look it up. [sublink]({{< relref "link/sub" >}} example.
+{{< wp Dogs >}} are cool, look it up. [sublink]({{< relref "link/sub" >}}) example.

@@ -1,33 +1,19 @@
-from functools import reduce
-
-from src.markdown.links import MarkdownLinks
-
-from src.markdown.headers import MarkdownHeader
-from src.markdown.simplestyle import MarkdownItalic, MarkdownBold, MarkdownStrikeThrough
-
+from pathlib import Path
 
 class MarkdownConverter:
+    converters = []
+
+    @classmethod
+    def Register(cls, converter_class):
+        cls.converters.append(converter_class())
+        return converter_class
 
     def __init__(self, file):
         self.file = file
-        self.converters = (
-            # TODO auto-discover these. How do I do that, without interfaces?
-            MarkdownHeader(),
-            MarkdownLinks(),
-            MarkdownItalic(),
-            MarkdownBold(),
-            MarkdownStrikeThrough()
-        )
 
     def convert(self):
-        converted = []
-        with open(self.file, 'r') as file:
-            for line in file:
-                converted.append(self.convert_line(line))
-
-        return "\n".join(converted)
-
-    def convert_line(self, line):
-        convertfns = map(lambda converter: converter.convert, self.converters)
-        massconvert = reduce(lambda red1, red2: lambda text: red1(red2(line)), convertfns, lambda text: text)
-        return massconvert(line)
+        text = Path(self.file).read_text()
+        # TODO solve this functional-style instead of mutating text
+        for converter in MarkdownConverter.converters:
+            text = converter.convert(text)
+        return text

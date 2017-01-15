@@ -1,7 +1,10 @@
-from collections import OrderedDict
 from re import compile
 
-class MarkdownHeader:
+from src.markdown_converter import MarkdownConverter
+
+
+@MarkdownConverter.Register
+class MarkdownHeader():
     pattern = compile('(=+)(.*?)(=+)')
     head = "="
     config = {

@@ -1,6 +1,10 @@
 import re
 
-class MarkdownOrderedList:
+from src.markdown_converter import MarkdownConverter
+
+
+@MarkdownConverter.Register
+class MarkdownOrderedList():
     pattern = re.compile('(^-\s)(.*)', re.MULTILINE)
 
     def convert(self, text):

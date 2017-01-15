@@ -1,6 +1,8 @@
 from abc import ABC
 from re import compile
 
+from src.markdown_converter import MarkdownConverter
+
 class BaseMarkdownCode(ABC):
     markdown = "```"
 
@@ -24,10 +26,12 @@ class BaseMarkdownCode(ABC):
             result = result.replace(match[0], BaseMarkdownCode.markdown + language)
         return result.replace('</' + self.tag + '>', BaseMarkdownCode.markdown)
 
+@MarkdownConverter.Register
 class MarkdownFile(BaseMarkdownCode):
     def __init__(self):
         super().__init__('file')
 
+@MarkdownConverter.Register
 class MarkdownCode(BaseMarkdownCode):
     def __init__(self):
         super().__init__('code')

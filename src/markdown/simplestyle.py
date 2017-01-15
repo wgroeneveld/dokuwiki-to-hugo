@@ -1,6 +1,9 @@
 from abc import ABC
 from re import compile
 
+from src.markdown_converter import MarkdownConverter
+
+
 class NopStyle(ABC):
     def convert(self, text):
         return text
@@ -29,27 +32,33 @@ class SimpleStyleBetweenTags(ABC):
             result = result.replace(orig_header, new_header)
         return result
 
+@MarkdownConverter.Register
 class MarkdownLineBreak(SimpleReplacementStyle):
     def __init__(self):
         super().__init__('<br/>', '\\')
 
 # inline html is supported with Hugo, don't need the tags.
-class MarkdownInlineHtml:
+@MarkdownConverter.Register
+class MarkdownInlineHtml():
     def convert(self, text):
         return text.replace('<html>', '').replace('</html>', '')
 
 # bold in Doku is bold in MD
+@MarkdownConverter.Register
 class MarkdownBold(NopStyle):
     pass
 
+@MarkdownConverter.Register
 class MarkdownItalic(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('*', '//')
 
+@MarkdownConverter.Register
 class MarkdownStrikeThrough(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('~~', '<del>', '</del>')
 
+@MarkdownConverter.Register
 class MarkdownInlineCode(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('`', "''", "''")

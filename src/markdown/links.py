@@ -1,8 +1,11 @@
-import os
-from os import walk
 import re
+from os import walk
 
-class MarkdownLinks:
+from src.markdown_converter import MarkdownConverter
+
+
+@MarkdownConverter.Register
+class MarkdownLinks():
     # see http://pythex.org/
     pattern = re.compile('(\[\[)(.*?)(\]\])')
 
