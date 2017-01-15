@@ -2,7 +2,6 @@ from re import compile
 
 from src.markdown_converter import MarkdownConverter
 
-
 @MarkdownConverter.Register
 class MarkdownHeader():
     pattern = compile('(=+)(.*?)(=+)')

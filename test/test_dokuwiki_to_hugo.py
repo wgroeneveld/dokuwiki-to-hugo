@@ -10,7 +10,7 @@ class TestDokuWikiToHugo(TestCase):
 
     def tearDown(self):
         shutil.rmtree('output')
-`
+
     def test_convert_whole_dir(self):
         DokuWikiToHugo().doku_to_hugo('subdir')
         expected = Path("output/subdir/moar/dokuwiki_header_in_subdir.txt").read_text()
