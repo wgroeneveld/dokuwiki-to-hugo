@@ -1,0 +1,6 @@
+== some header ==
+
+hello there!
+
+This is //dokuwiki// style stuff right there. \\
+Thanks for stopping by.
