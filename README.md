@@ -66,6 +66,26 @@ You'll have to come up with your own shortcodes for those.
 See wp.html in the layouts directory. You could customize interwiki links from dokuwiki: `[[custom>somelink]]` would refer to some custom wiki.
 Simply add custom.html and link to the website of your choice. Use Hugo's `{{ index .Params 0 }}` to get the link content.
 
+### TODO's
+
+There's a dokuwiki plugin which enables things like:
+ 
+ ```html
+ <todo>a todo list</todo>
+ <todo #>done</todo>
+ <todo #>also checked off</todo>
+ ```
+
+Hugo supports this using this MD syntax:
+
+```
+- [ ] a todo list
+- [x] done
+- [x] also checked off
+```
+
+I like lists. So this is naturally supported. 
+
 ### I want to create my own syntax conversion!
 
 No problem, the project was made with extensibility in mind.
