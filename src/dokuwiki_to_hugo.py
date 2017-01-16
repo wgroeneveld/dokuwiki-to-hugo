@@ -26,14 +26,17 @@ class DokuWikiToHugo:
     def process_file(self, root, file):
         destination_dir = 'output/' + root
         source_file = root + '/' + file
-        print('generating ' + destination_dir + '/' + file + '\n')
+        destination_file = '_index.md' if file == 'home.txt' else os.path.splitext(file)[0] + '.md'
+
+        print('generating ' + destination_dir + '/' + destination_file + '\n')
 
         if not os.path.exists(destination_dir):
             os.makedirs(destination_dir)
 
         header = self.header_converter.create(source_file)
         converted_text = MarkdownConverter(source_file).convert()
-        with open(destination_dir + '/' + file, "w") as text_file:
+
+        with open(destination_dir + '/' + destination_file, "w") as text_file:
             text_file.write(header)
             text_file.write('\n')
             text_file.write(converted_text)

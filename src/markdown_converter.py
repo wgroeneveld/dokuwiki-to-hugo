@@ -13,7 +13,6 @@ class MarkdownConverter:
 
     def convert(self):
         text = Path(self.file).read_text()
-        # TODO solve this functional-style instead of mutating text
         for converter in MarkdownConverter.converters:
             text = converter.convert(text)
         return text
