@@ -66,6 +66,17 @@ You'll have to come up with your own shortcodes for those.
 See wp.html in the layouts directory. You could customize interwiki links from dokuwiki: `[[custom>somelink]]` would refer to some custom wiki.
 Simply add custom.html and link to the website of your choice. Use Hugo's `{{ index .Params 0 }}` to get the link content.
 
+### Images
+
+Images are supported using the double `{{` syntax:
+
+1. simple image: ``{{someimg.jpg}}``
+2. positioning; left-right using space: ``{{ somerightaligned.jpg}}``
+3. dimensions: width only ``{{someimg.jpg?400}}``
+4. dimensions: width and height ``{{someimg.jpg?400x300}}``
+
+Of course combinations are also possible.
+
 ### TODO's
 
 There's a dokuwiki plugin which enables things like:
@@ -97,7 +108,6 @@ That way it's auto-loaded and wired in the main conversion.
 
 ### styling
 
-* Figure out image links ala http://php.net|{{wiki:dokuwiki-128.png}}
 * Tables, should complex ones be supported or can I do a manual convert?
 * no formatting (nowiki, %%) - should this just be a pre?
 
