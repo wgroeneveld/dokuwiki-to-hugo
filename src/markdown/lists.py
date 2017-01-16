@@ -5,24 +5,51 @@ from src.markdown_converter import MarkdownConverter
 
 @MarkdownConverter.Register
 class MarkdownOrderedList():
-    pattern = re.compile('(^-\s)(.*)', re.MULTILINE)
+    pattern = re.compile('(^(\s*)-\s)(.*)', re.MULTILINE)
 
     def convert(self, text):
         lines = text.split('\n')
-        last_used_linenr = 0
+        last_used_linenrs = []
         index = 0
         result = text
 
-        for match in MarkdownOrderedList.pattern.findall(text):
-            line = ''.join(match)
-            linenr = lines.index(line)
+        def deeper_depth(depth):
+            return list(filter(lambda x : x[0] > depth, last_used_linenrs))
+        def drop_in_depth_detected(depth):
+            return len(deeper_depth(depth)) > 0
+        def remove_deeper_depths(depth):
+            for itm in deeper_depth(depth):
+                last_used_linenrs.remove(itm)
+        def last_used_by_depth(depth):
+            return list(filter(lambda x: x[0] == depth, last_used_linenrs))
+        def last_used_index(depth):
+            return last_used_by_depth(depth)[0][2]
+        def last_used_linenr(depth):
+            result = last_used_by_depth(depth)
+            if len(result) == 0:
+                return 0
+            return result[0][1]
 
-            if last_used_linenr + 1 is linenr:
+        def set_last_used_linenr(depth, linenr, index):
+            result = list(filter(lambda x: x[0] == depth, last_used_linenrs))
+            if len(result) > 0:
+                last_used_linenrs.remove(result[0])
+            last_used_linenrs.append((depth, linenr, index))
+
+        for match in MarkdownOrderedList.pattern.findall(text):
+            current_line = (match[0] + match[2]).replace('\n', '')
+            current_depth = len(match[1].replace('\n', ''))
+            current_linenr = lines.index(current_line)
+
+            if last_used_linenr(current_depth) + 1 is current_linenr:
                 index = index + 1
+            elif drop_in_depth_detected(current_depth):
+                index = last_used_index(current_depth) + 1
+                remove_deeper_depths(current_depth)
             else:
                 index = 1
-            last_used_linenr = linenr
+            set_last_used_linenr(current_depth, current_linenr, index)
 
-            result = result.replace(line, str(index) + '. ' + match[1])
+            result = result.replace(current_line, match[1].replace('\n', '') + str(index) + '. ' + match[2])
 
         return result
