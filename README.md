@@ -6,6 +6,14 @@ See https://www.dokuwiki.org/wiki:syntax
 
 **How do I run this thing?**
 
+##### Running it from command line
+
+Just use the main python class. It uses `argparse` - only provide one argument: the directory you want to parse:
+
+```python main.py --dir='some_dokuwiki_root_dir'```
+
+##### Including it into your python project:
+
 Main wiring in `DokuWikiToHugo` - see the tests for an elaborate example.
 
 ```python
