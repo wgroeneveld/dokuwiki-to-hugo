@@ -21,6 +21,12 @@ class TestMarkdownLinks(TestCase):
         with self.assertRaises(ValueError):
             self.converter.convert("[[whaddapdawg>Wiki]]")
 
+    def test_known_interwiki_link_with_some_spaces(self):
+        mdLink = """{{< lib Purple Cow: Transform Your Business by Being Remarkable >}}"""
+        dokuLink = "[[lib>Purple Cow: Transform Your Business by Being Remarkable]]"
+
+        self.assertEqual(mdLink, self.converter.convert(dokuLink))
+
     def test_known_interwiki_link_converts_successfully(self):
         # see https://gohugo.io/extras/shortcodes/
         mdLink = """{{< wp Wiki >}}"""
@@ -46,9 +52,21 @@ class TestMarkdownLinks(TestCase):
 
         self.assertEqual(mdLink, self.converter.convert(dokuLink))
 
+    def test_internal_link_with_image_tag(self):
+        dokuLink = "[[code|<img src='code.jpg'>]]"
+        mdLink = """[<img src='code.jpg'>]({{< relref "code" >}})"""
+
+        self.assertEqual(mdLink, self.converter.convert(dokuLink))
+
     def test_internal_links_converted_properly(self):
         mdLink = """[text]({{< relref "bla" >}})"""
         dokuLink = "[[bla|text]]"
+
+        self.assertEqual(mdLink, self.converter.convert(dokuLink))
+
+    def test_external_link_without_title(self):
+        mdLink = "[https://www.google.com](https://www.google.com)"
+        dokuLink = "[[https://www.google.com]]"
 
         self.assertEqual(mdLink, self.converter.convert(dokuLink))
 

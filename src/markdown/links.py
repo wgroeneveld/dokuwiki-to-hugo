@@ -1,5 +1,6 @@
 import re
 from os import walk
+from pathlib import Path
 
 from src.markdown_converter import MarkdownConverter
 
@@ -16,7 +17,7 @@ class MarkdownLinks():
             convertedlink = ""
             if "http" in origlink or "www" in origlink:
                 convertedlink = self.convert_as_external_link(origlink)
-            elif ">" in origlink:
+            elif ">" in origlink and not "<" in origlink:
                 convertedlink = self.convert_as_interwiki_link(origlink)
             else:
                 convertedlink = self.convert_as_internal_link(origlink)
@@ -49,14 +50,17 @@ class MarkdownLinks():
         return """[%s]({{< relref "%s" >}})""" % (title, url)
 
     def convert_as_external_link(self, text):
-        url = self.parseUrl(text)
-        title = self.parseTitle(text)
-
-        return "[" + title + "](" + url + ")"
+        if '|' in text:
+            url = self.parseUrl(text)
+            title = self.parseTitle(text)
+            return "[" + title + "](" + url + ")"
+        url = text.replace('[', '').replace(']', '')
+        return "[" + url + "](" + url + ")"
 
     def assert_interwiki_is_known(self, shortcode):
         shortcodes = []
-        for (dirpath, dirnames, filenames) in walk("../layouts/shortcodes"):
+        shortcodes_path = Path(__file__).parents[2].joinpath('layouts/shortcodes')
+        for (dirpath, dirnames, filenames) in walk(shortcodes_path):
             shortcodes.extend(filenames)
             break
         if not shortcode in map(lambda x: x.replace(".html", ""), shortcodes):
