@@ -8,6 +8,10 @@ class TestMarkdownHeader(TestCase):
     def setUp(self):
         self.converter = MarkdownHeader()
 
+    def test_does_not_convert_if_too_long(self):
+        src = "# ======================================="
+        self.assertEqual(src, self.converter.convert(src))
+
     def test_convert_does_nothing_if_no_header(self):
         self.assertEqual("blabla", self.converter.convert("blabla"))
 

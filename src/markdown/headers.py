@@ -19,6 +19,8 @@ class MarkdownHeader():
         result = text
         for regex_head in MarkdownHeader.pattern.findall(text):
             orig_header = ''.join(regex_head)
-            new_header = ('#' * MarkdownHeader.config[regex_head[0]]) + regex_head[1]
-            result = result.replace(orig_header, new_header)
+            src_header = regex_head[0]
+            if src_header in MarkdownHeader.config:
+                new_header = ('#' * MarkdownHeader.config[src_header]) + regex_head[1]
+                result = result.replace(orig_header, new_header)
         return result
