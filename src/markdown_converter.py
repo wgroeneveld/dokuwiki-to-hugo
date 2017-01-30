@@ -1,10 +1,11 @@
 from pathlib import Path
 
+
 class MarkdownConverter:
     converters = []
 
     @classmethod
-    def Register(cls, converter_class):
+    def register(cls, converter_class):
         cls.converters.append(converter_class())
         return converter_class
 

@@ -1,8 +1,8 @@
 from src.markdown_converter import MarkdownConverter
 
 
-@MarkdownConverter.Register
-class MarkdownEmoji():
+@MarkdownConverter.register
+class MarkdownEmoji:
     # config as you like. http://www.webpagefx.com/tools/emoji-cheat-sheet/
     config = {
         '8-)': 'sunglasses',

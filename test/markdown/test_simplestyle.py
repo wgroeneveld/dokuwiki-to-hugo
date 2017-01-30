@@ -5,7 +5,6 @@ from src.markdown.simplestyle import MarkdownBold, MarkdownItalic, MarkdownStrik
 
 
 class TestMarkdownSimpleStyles(TestCase):
-
     def test_inline_html_simply_removes_tags(self):
         src = "<html><strong>sup</strong></html>"
         expected = "<strong>sup</strong>"

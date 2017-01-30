@@ -1,8 +1,9 @@
 from src.markdown_converter import MarkdownConverter
 from re import compile
 
-@MarkdownConverter.Register
-class MarkdownTodo():
+
+@MarkdownConverter.register
+class MarkdownTodo:
     pattern = compile('(<todo(\s#)?>)(.*?)(</todo>)')
     todo = '- [ ] '
     done = '- [x] '

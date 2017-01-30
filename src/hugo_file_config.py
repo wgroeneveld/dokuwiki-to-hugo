@@ -1,4 +1,5 @@
-import os.path, time
+import os.path
+import time
 
 
 class HugoFileConfig:

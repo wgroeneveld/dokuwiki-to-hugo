@@ -7,7 +7,6 @@ from src.hugo_file_config import HugoFileConfig
 
 
 class TestHugoFileConfig(TestCase):
-
     def set_file_timestamp(self):
         date = datetime(2014, 10, 10, 12)
         u_time = mktime(date.timetuple())

@@ -8,6 +8,7 @@ class NopStyle(ABC):
     def convert(self, text):
         return text
 
+
 class SimpleReplacementStyle(ABC):
     def __init__(self, markdown_style, dokuwiki_style):
         self.markdown_style = markdown_style
@@ -16,9 +17,9 @@ class SimpleReplacementStyle(ABC):
     def convert(self, text):
         return text.replace(self.dokuwiki_style, self.markdown_style)
 
-class SimpleStyleBetweenTags(ABC):
 
-    def __init__(self, markdown_style, dokuwiki_style_begin, dokuwiki_style_end = None):
+class SimpleStyleBetweenTags(ABC):
+    def __init__(self, markdown_style, dokuwiki_style_begin, dokuwiki_style_end=None):
         if dokuwiki_style_end is None:
             dokuwiki_style_end = dokuwiki_style_begin
         self.pattern = compile('(' + dokuwiki_style_begin + ')(.*?)(' + dokuwiki_style_end + ')')
@@ -32,33 +33,39 @@ class SimpleStyleBetweenTags(ABC):
             result = result.replace(orig_header, new_header)
         return result
 
-@MarkdownConverter.Register
+
+@MarkdownConverter.register
 class MarkdownLineBreak(SimpleReplacementStyle):
     def __init__(self):
         super().__init__('<br/>', '\\')
 
+
 # inline html is supported with Hugo, don't need the tags.
-@MarkdownConverter.Register
-class MarkdownInlineHtml():
+@MarkdownConverter.register
+class MarkdownInlineHtml:
     def convert(self, text):
         return text.replace('<html>', '').replace('</html>', '')
 
+
 # bold in Doku is bold in MD
-@MarkdownConverter.Register
+@MarkdownConverter.register
 class MarkdownBold(NopStyle):
     pass
 
-@MarkdownConverter.Register
+
+@MarkdownConverter.register
 class MarkdownItalic(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('*', '//')
 
-@MarkdownConverter.Register
+
+@MarkdownConverter.register
 class MarkdownStrikeThrough(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('~~', '<del>', '</del>')
 
-@MarkdownConverter.Register
+
+@MarkdownConverter.register
 class MarkdownInlineCode(SimpleStyleBetweenTags):
     def __init__(self):
         super().__init__('`', "''", "''")

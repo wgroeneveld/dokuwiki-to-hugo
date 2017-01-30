@@ -4,8 +4,8 @@ from pathlib import Path
 
 from src.markdown_converter import MarkdownConverter
 
-class TestMarkdownHeader(TestCase):
 
+class TestMarkdownHeader(TestCase):
     def setUp(self):
         self.converter = MarkdownConverter("dokuwiki_example.txt")
 
@@ -16,4 +16,3 @@ class TestMarkdownHeader(TestCase):
 
         print(actual)
         self.assertEqual(expected, actual, "Files not matching!")
-

@@ -1,7 +1,8 @@
 from src.markdown_converter import MarkdownConverter
 from re import compile
 
-@MarkdownConverter.Register
+
+@MarkdownConverter.register
 class MarkdownImages:
     pattern = compile('{{(\s?)(.*?)(\s?)}}')
 
@@ -21,6 +22,7 @@ class MarkdownImages:
                 style.append("height: " + height + "px;")
             else:
                 style.append("width: " + dimensions + "px;")
+
         def parse_position():
             if len(left) > 0 and len(right) > 0:
                 style.append("margin-left: auto; margin-right: auto;")

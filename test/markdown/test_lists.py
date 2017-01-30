@@ -2,6 +2,7 @@ from unittest import TestCase
 
 from src.markdown.lists import MarkdownOrderedList
 
+
 class TestMarkdownLists(TestCase):
     def setUp(self):
         self.converter = MarkdownOrderedList()
@@ -42,7 +43,6 @@ five - six
         '''
         actual = self.converter.convert(src)
         self.assertEqual(expected, actual)
-
 
     def test_ordered_lists_nested(self):
         src = '''

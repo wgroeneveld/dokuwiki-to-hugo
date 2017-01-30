@@ -2,8 +2,9 @@ from re import compile
 
 from src.markdown_converter import MarkdownConverter
 
-@MarkdownConverter.Register
-class MarkdownHeader():
+
+@MarkdownConverter.register
+class MarkdownHeader:
     pattern = compile('(=+)(.*?)(=+)')
     head = "="
     config = {

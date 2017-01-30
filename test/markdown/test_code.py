@@ -2,8 +2,8 @@ from unittest import TestCase
 
 from src.markdown.code import MarkdownCode, MarkdownFile
 
-class TestMarkdownCode(TestCase):
 
+class TestMarkdownCode(TestCase):
     def setUp(self):
         self.code_converter = MarkdownCode()
         self.file_converter = MarkdownFile()

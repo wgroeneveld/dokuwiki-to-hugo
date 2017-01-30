@@ -8,7 +8,7 @@ from src.markdown_converter import MarkdownConverter
 class DokuWikiToHugo:
     root_dir = ""
 
-    def __init__(self, root = None):
+    def __init__(self, root=None):
         self.header_converter = HugoFileConfig()
         DokuWikiToHugo.root_dir = root
         pass
@@ -19,9 +19,9 @@ class DokuWikiToHugo:
             shutil.rmtree('output')
         os.mkdir('output')
 
-    def doku_to_hugo(self, dir):
+    def doku_to_hugo(self, directory):
         self.create_output_dir()
-        for root, subFolders, files in os.walk(dir):
+        for root, subFolders, files in os.walk(directory):
             files = [f for f in files if not f[0] == '.']
             for file in files:
                 self.process_file(root, file)

@@ -2,6 +2,7 @@ from unittest import TestCase
 
 from src.markdown.images import MarkdownImages
 
+
 class TestMarkdownImages(TestCase):
     def setUp(self):
         self.converter = MarkdownImages()
