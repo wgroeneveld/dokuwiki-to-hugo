@@ -8,9 +8,9 @@ from src.markdown_converter import MarkdownConverter
 class DokuWikiToHugo:
     root_dir = ""
 
-    def __init__(self, root=None, front_matter=True):
+    def __init__(self, root=None, frontmatter_tags=True):
         self.header_converter = HugoFrontMatter()
-        self.convert_frontmatter = front_matter
+        self.frontmatter_tags = frontmatter_tags
         DokuWikiToHugo.root_dir = root
         pass
 
@@ -39,11 +39,10 @@ class DokuWikiToHugo:
 
         if not os.path.exists(destination_dir):
             os.makedirs(destination_dir)
+        header = self.header_converter.create(source_file, frontmatter_tags=self.frontmatter_tags)
         converted_text = MarkdownConverter(source_file).convert()
 
         with open(destination_dir + '/' + destination_file, "w") as text_file:
-            if self.convert_frontmatter:
-                header = self.header_converter.create(source_file)
-                text_file.write(header)
+            text_file.write(header)
             text_file.write('\n')
             text_file.write(converted_text)
