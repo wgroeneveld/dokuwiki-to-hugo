@@ -2,7 +2,7 @@ import os.path
 import time
 
 
-class HugoFileConfig:
+class HugoFrontMatter:
 
     def filename(self, location):
         return location.split('/')[-1][0:-4]
