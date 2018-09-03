@@ -1,6 +1,6 @@
 import argparse
 
-from src.dokuwiki_to_hugo import DokuWikiToHugo
+from dokuwiki_to_hugo import DokuWikiToHugo
 
 
 def main(directory, root):

@@ -10,7 +10,7 @@ See https://www.dokuwiki.org/wiki:syntax
 
 Just use the main python class. It uses `argparse` - only provide one argument: the directory you want to parse:
 
-```python main.py --dir='some_dokuwiki_root_dir'```
+```python src/main.py --dir='some_dokuwiki_root_dir'```
 
 ##### Including it into your python project:
 

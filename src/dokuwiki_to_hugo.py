@@ -1,8 +1,8 @@
 import os
 import shutil
 
-from src.hugo_file_config import HugoFileConfig
-from src.markdown_converter import MarkdownConverter
+from hugo_file_config import HugoFileConfig
+from markdown_converter import MarkdownConverter
 
 
 class DokuWikiToHugo:
