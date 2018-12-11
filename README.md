@@ -8,9 +8,15 @@ See https://www.dokuwiki.org/wiki:syntax
 
 ##### Running it from command line
 
-Just use the main python class. It uses `argparse` - only provide one argument: the directory you want to parse:
+Just use the main python class. It uses `argparse`:
 
 ```python main.py --dir='some_dokuwiki_root_dir'```
+
+Command line options:
+
+- `--dir`, the directory of your DokuWiki pages collection.
+- `--frontmatter_tags=true`, whether to generate tags in the converted Hugo markdown. By default, the tool generates
+tags based on the path to the document.
 
 ##### Including it into your python project:
 

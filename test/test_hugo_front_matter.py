@@ -3,10 +3,10 @@ from os import utime
 from time import mktime
 from unittest import TestCase
 
-from src.hugo_file_config import HugoFileConfig
+from src.hugo_front_matter import HugoFrontMatter
 
 
-class TestHugoFileConfig(TestCase):
+class TestHugoFrontMatter(TestCase):
     def set_file_timestamp(self):
         date = datetime(2014, 10, 10, 12)
         u_time = mktime(date.timetuple())
@@ -15,7 +15,7 @@ class TestHugoFileConfig(TestCase):
 
     def setUp(self):
         self.set_file_timestamp()
-        self.header = HugoFileConfig()
+        self.header = HugoFrontMatter()
 
     def test_dokuwiki_in_subdir_creates_tags_for_each_dir(self):
         expected_header = """+++
