@@ -1,15 +1,21 @@
 import os
 import shutil
 
+<<<<<<< HEAD
 from hugo_file_config import HugoFileConfig
 from markdown_converter import MarkdownConverter
+=======
+from src.hugo_front_matter import HugoFrontMatter
+from src.markdown_converter import MarkdownConverter
+>>>>>>> master
 
 
 class DokuWikiToHugo:
     root_dir = ""
 
-    def __init__(self, root=None):
-        self.header_converter = HugoFileConfig()
+    def __init__(self, root=None, frontmatter_tags=True):
+        self.header_converter = HugoFrontMatter()
+        self.frontmatter_tags = frontmatter_tags
         DokuWikiToHugo.root_dir = root
         pass
 
@@ -24,7 +30,10 @@ class DokuWikiToHugo:
         for root, subFolders, files in os.walk(directory):
             files = [f for f in files if not f[0] == '.']
             for file in files:
-                self.process_file(root, file)
+                try:
+                    self.process_file(root, file)
+                except:
+                    print('failed to convert ' + file)
 
     def process_file(self, root, file):
         destination_dir = 'output/' + root
@@ -35,8 +44,7 @@ class DokuWikiToHugo:
 
         if not os.path.exists(destination_dir):
             os.makedirs(destination_dir)
-
-        header = self.header_converter.create(source_file)
+        header = self.header_converter.create(source_file, frontmatter_tags=self.frontmatter_tags)
         converted_text = MarkdownConverter(source_file).convert()
 
         with open(destination_dir + '/' + destination_file, "w") as text_file:
