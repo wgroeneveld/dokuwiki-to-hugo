@@ -152,3 +152,6 @@ ENV/
 .ropeproject
 
 # End of https://www.gitignore.io/api/pycharm,python
+
+# Ignore output directory generated from program
+output/
