@@ -10,8 +10,8 @@ class TestHugoFrontMatter(TestCase):
     def set_file_timestamp(self):
         date = datetime(2014, 10, 10, 12)
         u_time = mktime(date.timetuple())
-        utime('dokuwiki_header_example.txt', (u_time, u_time))
-        utime('subdir/moar/dokuwiki_header_in_subdir.txt', (u_time, u_time))
+        utime('test/dokuwiki_header_example.txt', (u_time, u_time))
+        utime('test/subdir/moar/dokuwiki_header_in_subdir.txt', (u_time, u_time))
 
     def setUp(self):
         self.set_file_timestamp()
@@ -22,14 +22,16 @@ class TestHugoFrontMatter(TestCase):
 title = "dokuwiki_header_in_subdir"
 draft = false
 tags = [
+    "test",
     "subdir",
     "moar",
     "dokuwiki_header_in_subdir"
 ]
+
 date = "2014-10-10"
 +++"""
 
-        actual_header = self.header.create('subdir/moar/dokuwiki_header_in_subdir.txt')
+        actual_header = self.header.create('test/subdir/moar/dokuwiki_header_in_subdir.txt')
         self.assertEqual(expected_header, actual_header)
 
     def test_dokuwiki_header_example(self):
@@ -37,10 +39,12 @@ date = "2014-10-10"
 title = "dokuwiki_header_example"
 draft = false
 tags = [
+    "test",
     "dokuwiki_header_example"
 ]
+
 date = "2014-10-10"
 +++"""
 
-        actual_header = self.header.create('dokuwiki_header_example.txt')
+        actual_header = self.header.create('test/dokuwiki_header_example.txt')
         self.assertEqual(expected_header, actual_header)

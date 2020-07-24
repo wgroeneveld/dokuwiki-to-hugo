@@ -10,13 +10,17 @@ See https://www.dokuwiki.org/wiki:syntax
 
 Just use the main python class. It uses `argparse`:
 
-```python src/main.py --dir='some_dokuwiki_root_dir'```
+`python src/main.py --dir='some_dokuwiki_root_dir'`
 
 Command line options:
 
 - `--dir`, the directory of your DokuWiki pages collection.
 - `--frontmatter_tags=true`, whether to generate tags in the converted Hugo markdown. By default, the tool generates
 tags based on the path to the document.
+
+##### Running unittests
+
+`python runtests.py` in root folder. `-m unittest` does not work as imports mess up `src`/`test` subfolder structures.
 
 ##### Including it into your python project:
 

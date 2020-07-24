@@ -1,13 +1,8 @@
 import os
 import shutil
 
-<<<<<<< HEAD
-from hugo_file_config import HugoFileConfig
+from hugo_front_matter import HugoFrontMatter
 from markdown_converter import MarkdownConverter
-=======
-from src.hugo_front_matter import HugoFrontMatter
-from src.markdown_converter import MarkdownConverter
->>>>>>> master
 
 
 class DokuWikiToHugo:
