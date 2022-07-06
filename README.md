@@ -1,3 +1,7 @@
+⚠️ ⚠️ **PLEASE READ** ⚠️ ⚠️:  this is an ARCHIVED version. Please go to https://git.brainbaking.com/wgroeneveld/dokuwiki-to-hugo for the latest version of this repository. Leave github: https://giveupgithub.org/
+
+---
+
 # dokuwiki-to-hugo
 
 A DokuWiki to Hugo file exporter to quickly migrate your existing PHP wiki to Hugo
